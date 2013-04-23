@@ -1,0 +1,16 @@
+(define (larger x y)
+  (if (> x y) x y))
+
+
+(define (square x) (* x x))
+
+
+(define (sum-square a b c)
+  
+	(cond ((= a (larger a b)) (+ (square a) (square (larger b c))))
+
+        (else (+ (square b) (square (larger a c))))))
+
+
+
+(sum-square 3 1 2)
